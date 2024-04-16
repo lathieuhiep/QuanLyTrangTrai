@@ -1,8 +1,13 @@
+package com.techja.quanlytrangtrai.main;
+
+import com.techja.quanlytrangtrai.giacam.Ga;
+import com.techja.quanlytrangtrai.giacam.GiaCam;
+import com.techja.quanlytrangtrai.giacam.Vit;
+
 public class Main {
     public static void main(String[] args) {
         // ga ri
-        Ga gaRi = new Ga();
-        gaRi.nhapGiaTri(
+        GiaCam giaCam1 = new Ga(
                 "G01",
                 "Gà ri",
                 "Thóc",
@@ -14,14 +19,15 @@ public class Main {
                 1.2,
                 4
         );
-        gaRi.inTT();
-        gaRi.deTrung();
-        gaRi.boiDat();
-        gaRi.keu();
+
+        giaCam1.inTT();
+        giaCam1.keu();
+        giaCam1.deTrung();
+        ((Ga)giaCam1).boiDat();
 
         // vit xiem
-        Vit vitXiem = new Vit();
-        vitXiem.nhapGiaTri("G02",
+        GiaCam giaCam2 = new Vit(
+                "G02",
                 "Vịt xiêm",
                 "Thóc",
                 "Trên cạn / Dưới nước",
@@ -32,9 +38,9 @@ public class Main {
                 1.2,
                 "Mào xanh"
         );
-        vitXiem.inTT();
-        vitXiem.deTrung();
-        vitXiem.boiLoi();
-        vitXiem.keu();
+        giaCam2.inTT();
+        giaCam2.keu();
+        giaCam2.deTrung();
+        ((Vit)giaCam2).boiLoi();
     }
 }
